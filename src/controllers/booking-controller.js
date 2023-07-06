@@ -27,7 +27,7 @@ async function makePayment(req, res) {
     successResponse.data = response;
     return res.status(StatusCodes.OK).json(successResponse);
   } catch (error) {
-    console.log(error);
+   
     ErrorResponse.error = error;
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(ErrorResponse);
   }
